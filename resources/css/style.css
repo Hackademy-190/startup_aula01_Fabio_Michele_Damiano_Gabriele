@@ -1,9 +1,22 @@
-:root{
---alabaster-grey: #e5e5e5ff;
---muted-teal: #84a98cff;
---deep-teal: #52796fff;
---dark-slate-grey: #354f52ff;
---charcoal-blue: #2f3e46ff;
---jet-black: #20282cff;
---onyx: #111111ff;
+:root {
+
+  --clr-alabaster: #e5e5e5;
+  --clr-muted-teal: #84a98c;
+  --clr-deep-teal: #52796f;
+  --clr-dark-slate: #354f52;
+  --clr-charcoal: #2f3e46;
+  --clr-jet-black: #20282c;
+  --clr-onyx: #111111;
+
+  --bg-page: var(--clr-jet-black);
+  --bg-surface: var(--clr-charcoal);
+  --bg-navbar: var(--clr-charcoal);
+
+  --text-main: var(--clr-alabaster);
+  --text-muted: var(--clr-muted-teal);
+
+  --brand-primary: var(--clr-deep-teal);
+  --brand-accent: var(--clr-muted-teal);
+  --border-subtle: var(--clr-dark-slate);
 }
+
