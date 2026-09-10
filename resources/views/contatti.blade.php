@@ -1,5 +1,5 @@
 <x-layout>
-    <x-navbar />
+    
     <div class="container mt-5">
         <h1 class="text-center mb-4">Contattaci</h1>
 <form action="{{ route('contact') }}" method="POST" style="max-width: 400px; margin: 20px auto; font-family: sans-serif;">
