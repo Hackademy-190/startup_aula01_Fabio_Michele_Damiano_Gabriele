@@ -10,8 +10,8 @@ class PublicController extends Controller
         return view("welcome");
     }
     
-    public function progetti(){
-        return view("progetti");
+    public function blog(){
+        return view("blog");
     }
     
     public function contatti(){

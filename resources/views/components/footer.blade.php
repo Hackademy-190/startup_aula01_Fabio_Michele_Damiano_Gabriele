@@ -25,9 +25,9 @@
                 <h4>Navigazione</h4>
                 <ul class="footer-links">
                     <li><a href="{{ route('welcome') }}">Home</a></li>
-                    <li><a href="{{ route('progetti') }}">Progetti</a></li>
-                    <li><a href="{{ route('contact') }}">Chi Siamo</a></li>
-                    <li><a href="{{ route('chi-siamo') }}">Contatti</a></li>
+                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                    <li><a href="{{ route('contact') }}">Contatti</a></li>
+                    <li><a href="{{ route('chi-siamo') }}">Chi Siamo</a></li>
                 </ul>
             </div>
             

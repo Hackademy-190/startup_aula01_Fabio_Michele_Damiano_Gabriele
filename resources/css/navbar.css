@@ -1,4 +1,3 @@
-
 /* Base Navbar */
 .navbar-custom {
   background-color: var(--charcoal-blue);
@@ -49,4 +48,11 @@
 .navbar-custom .nav-link:hover::after,
 .navbar-custom .nav-link.active::after {
   width: 75%;
+}
+
+/* Font e colori */
+
+h1,h2,h3,h4,h5,h6,p,a,label,span,li,button{
+  font-family: 'Space Mono', sans-serif !important;
+  color: var(--clr-alabaster);
 }
