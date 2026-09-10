@@ -26,8 +26,8 @@
                 <ul class="footer-links">
                     <li><a href="{{ route('welcome') }}">Home</a></li>
                     <li><a href="{{ route('blog') }}">Blog</a></li>
-                    <li><a href="{{ route('contact') }}">Contatti</a></li>
                     <li><a href="{{ route('chi-siamo') }}">Chi Siamo</a></li>
+                    <li><a href="{{ route('contact') }}">Contatti</a></li>
                 </ul>
             </div>
             
