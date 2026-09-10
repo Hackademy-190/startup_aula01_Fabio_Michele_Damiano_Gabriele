@@ -10,7 +10,7 @@
     </head>
     <body>
         <x-navbar />
-        <div class="vh-100 d-flex" style="background-color:#20282c">
+        <div class="vh-100 d-flex text-light" style="background-color:#20282c">
             {{$slot}}
         </div>
         <x-footer />
