@@ -56,3 +56,23 @@ h1,h2,h3,h4,h5,h6,p,a,label,span,li,button{
   font-family: 'Space Mono', sans-serif !important;
   color: var(--clr-alabaster);
 }
+
+/* --- Adattamenti Responsive per Mobile / Tablet (< 992px) --- */
+@media (max-width: 991.98px) {
+  .navbar-custom .navbar-collapse {
+    background-color: #ffffff;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-custom .nav-item {
+    text-align: center; /* Allinea i link al centro su mobile */
+    margin-bottom: 8px;
+  }
+
+  .navbar-custom .nav-item:last-child {
+    margin-bottom: 0;
+  }
+}

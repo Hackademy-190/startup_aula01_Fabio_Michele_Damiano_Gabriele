@@ -197,4 +197,35 @@
   flex-wrap: wrap;
   gap: 1rem;
 }
+/* --- Adattamenti Responsive per Mobile / Tablet (< 992px) --- */
+@media (max-width: 991.98px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr); /* Diventa a 2 colonne */
+    gap: 30px;
+  }
+}
 
+/* Smartphone (schermi < 576px) */
+@media (max-width: 575.98px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr; /* Diventa a 1 colonna singola */
+    gap: 35px;
+    text-align: center;
+  }
+
+  .social-links {
+    justify-content: center; /* Centra le icone social su mobile */
+  }
+
+  .newsletter-form {
+    flex-direction: column; /* Input e Bottone l'uno sotto l'altro su mobile */
+  }
+
+  .btn-newsletter {
+    width: 100%;
+  }
+}
