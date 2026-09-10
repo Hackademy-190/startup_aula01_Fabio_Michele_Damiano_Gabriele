@@ -4,7 +4,7 @@
             
             <!-- Colonna 1: Brand e Social -->
             <div class="footer-col brand-col">
-                <a href="#" class="footer-logo">
+                <a href="{{ route('welcome') }}" class="footer-logo">
                     Logo
                 </a>
                 <p class="brand-desc">
@@ -45,7 +45,7 @@
             <div class="footer-col newsletter-col">
                 <h4>Newsletter</h4>
                 <p>Contattaci per discutere il tuo progetto web e individuare la soluzione tecnica più adatta.</p>
-                <form class="newsletter-form";>
+                <form class="newsletter-form">
                     <input type="email" placeholder="Inserisci la tua email" required />
                     <button type="submit" class="btn-newsletter">Iscriviti</button>
                 </form>
