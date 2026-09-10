@@ -13,7 +13,7 @@
           <a class="nav-link" href="{{Route('progetti')}}">Progetti</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{Route('contatti')}}">Contatti</a>
+          <a class="nav-link" href="{{Route('contact')}}">Contatti</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{Route('chi-siamo')}}">Chi Siamo</a>

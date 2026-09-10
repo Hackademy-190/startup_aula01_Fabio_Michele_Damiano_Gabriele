@@ -10,3 +10,9 @@ Route::get('/contatti', [PublicController::class, 'contatti'])->name('contatti')
 Route::get('/progetti', [PublicController::class, 'progetti'])->name('progetti');
 
 Route::get('/chi-siamo', [PublicController::class, 'chiSiamo'])->name('chi-siamo');
+
+// Rotta per vedere la pagina dei contatti
+Route::get('/contatti', [PublicController::class, 'contatti'])->name('contact');
+
+// Rotta per inviare il form (quella usata nell'action del form)
+Route::post('/contatti', [PublicController::class, 'contattiSubmit'])->name('contact.submit');
