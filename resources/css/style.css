@@ -1,27 +1,200 @@
 :root {
+    --clr-alabaster: #e5e5e5;
+    --clr-muted-teal: #84a98c;
+    --clr-deep-teal: #52796f;
+    --clr-dark-slate: #354f52;
+    --clr-charcoal: #2f3e46;
+    --clr-jet-black: #20282c;
+    --clr-onyx: #111111;
 
-  --clr-alabaster: #e5e5e5;
-  --clr-muted-teal: #84a98c;
-  --clr-deep-teal: #52796f;
-  --clr-dark-slate: #354f52;
-  --clr-charcoal: #2f3e46;
-  --clr-jet-black: #20282c;
-  --clr-onyx: #111111;
+    --bg-page: var(--clr-jet-black);
+    --bg-surface: var(--clr-charcoal);
+    --bg-navbar: var(--clr-charcoal);
 
-  --bg-page: var(--clr-jet-black);
-  --bg-surface: var(--clr-charcoal);
-  --bg-navbar: var(--clr-charcoal);
+    --text-main: var(--clr-alabaster);
+    --text-muted: var(--clr-muted-teal);
 
-  --text-main: var(--clr-alabaster);
-  --text-muted: var(--clr-muted-teal);
-
-  --brand-primary: var(--clr-deep-teal);
-  --brand-accent: var(--clr-muted-teal);
-  --border-subtle: var(--clr-dark-slate);
+    --brand-primary: var(--clr-deep-teal);
+    --brand-accent: var(--clr-muted-teal);
+    --border-subtle: var(--clr-dark-slate);
 }
 
-h1,h2,h3,h4,h5,h6,p{
-    font-family: 'Space Mono', sans-serif;
+h1,h2,h3,h4,h5,h6,p {
     color: var(--clr-alabaster);
+    font-family: 'Space Mono', sans-serif;
 }
 
+.btn-primario {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--muted-teal);
+    color: var(--clr-onyx);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-primario:hover {
+    background-color: var(--deep-teal);
+    color: var(--alabaster-grey);
+}
+
+/* Blog: lista degli articoli */
+
+.blog-section {
+    width: 100%;
+    max-width: 900px;
+    padding: 80px 24px;
+}
+
+.blog-header {
+    max-width: 680px;
+    margin-bottom: 48px;
+}
+
+.blog-header h1 {
+    margin-bottom: 12px;
+    font-size: 56px;
+    line-height: 1;
+}
+
+.blog-header p:last-child,
+.blog-excerpt {
+    color: var(--text-muted);
+}
+
+.blog-eyebrow,
+.blog-date {
+    margin-bottom: 12px;
+    color: var(--brand-accent);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.blog-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.blog-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 32px 0;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.blog-item:last-child {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.blog-item-content {
+    max-width: 700px;
+}
+
+.blog-date {
+    margin-bottom: 8px;
+}
+
+.blog-title {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+
+.blog-title a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.blog-title a:hover,
+.blog-read-more:hover {
+    color: var(--brand-accent);
+}
+
+.blog-excerpt {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+.blog-read-more {
+    flex: 0 0 auto;
+    padding-top: 28px;
+    color: var(--text-main);
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Blog: pagina del singolo articolo */
+
+.blog-article {
+    width: 100%;
+    max-width: 800px;
+    padding: 80px 24px 112px;
+}
+
+.blog-back-link {
+    display: inline-block;
+    margin-bottom: 64px;
+    color: var(--brand-accent);
+    text-decoration: none;
+}
+
+.blog-back-link:hover {
+    color: var(--text-main);
+}
+
+.blog-article-header {
+    max-width: 720px;
+    margin-bottom: 48px;
+}
+
+.blog-article-header h1 {
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.blog-article-content {
+    max-width: 680px;
+}
+
+.blog-article-content p {
+    color: var(--text-muted);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+    .blog-section {
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
+
+    .blog-header h1 {
+        font-size: 40px;
+    }
+
+    .blog-item {
+        display: block;
+    }
+
+    .blog-read-more {
+        display: inline-block;
+        padding-top: 16px;
+    }
+
+    .blog-article {
+        padding-top: 48px;
+        padding-bottom: 80px;
+    }
+
+    .blog-article-header h1 {
+        font-size: 36px;
+    }
+}
