@@ -19,41 +19,16 @@ class PublicController extends Controller
     public function blogShow($id)
     {
         $post = collect($this->posts())->firstWhere('id', $id);
+
         return view('blog-show', compact('post'));
     }
-    private function posts(): array
-    {
-        return [
-            [
-                'id' => 1,
-                'title' => 'Lorem ipsum dolor 1',
-                'date' => '10 settembre 2026',
-                'content' => 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            ],
-            [
-                'id' => 2,
-                'title' => 'Lorem ipsum dolor 2',
-                'date' => '3 settembre 2026',
-                'content' => 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            ],
-            [
-                'id' => 3,
-                'title' => 'Lorem ipsum dolor 3',
-                'date' => '27 agosto 2026',
-                'content' => 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            ],
-        ];
-    }
+    
 
     public function contatti()
     {
         return view('contatti');
     }
 
-    public function chiSiamo()
-    {
-        return view('chi-siamo');
-    }
 
     public function contattiSubmit(Request $request)
     {
