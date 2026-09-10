@@ -21,7 +21,6 @@ class PublicController extends Controller
         $post = collect($this->posts())->firstWhere('id', $id);
         return view('blog-show', compact('post'));
     }
-
     private function posts(): array
     {
         return [
