@@ -9,10 +9,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     </head>
     <body>
-         {{--  bg di prova --}}
-    <div class="vh-100 text-center py-5" style="background-color:#20282c">
-        <div>
+        <x-navbar />
+        <div class="vh-100 d-flex" style="background-color:#20282c">
             {{$slot}}
         </div>
+        <x-footer />
     </body>
 </html>
