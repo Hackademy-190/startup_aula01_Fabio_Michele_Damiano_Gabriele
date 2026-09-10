@@ -1,0 +1,60 @@
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-grid">
+            
+            <!-- Colonna 1: Brand e Social -->
+            <div class="footer-col brand-col">
+                <a href="#" class="footer-logo">
+                    Logo
+                </a>
+                <p class="brand-desc">
+                    Creiamo esperienze digitali uniche, unendo design moderno e funzionalità avanzate per far crescere la tua attività.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <!-- Colonna 2: Link Navigazione -->
+            <div class="footer-col">
+                <h4>Navigazione</h4>
+                <ul class="footer-links">
+                    <li><a href="{{ route('welcome') }}">Home</a></li>
+                    <li><a href="{{ route('progetti') }}">Progetti</a></li>
+                    <li><a href="{{ route('contact') }}">Chi Siamo</a></li>
+                    <li><a href="{{ route('chi-siamo') }}">Contatti</a></li>
+                </ul>
+            </div>
+            
+            <!-- Colonna 3: Servizi -->
+            <div class="footer-col">
+                <h4>Servizi</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">Consulenza Digital</a></li>
+                </ul>
+            </div>
+            
+            <!-- Colonna 4: Newsletter -->
+            <div class="footer-col newsletter-col">
+                <h4>Newsletter</h4>
+                <p>Iscriviti per ricevere aggiornamenti e novità su i nostri progetti.</p>
+                <form class="newsletter-form";>
+                    <input type="email" placeholder="Inserisci la tua email" required />
+                    <button type="submit" class="btn-newsletter">Iscriviti</button>
+                </form>
+            </div>
+            
+        </div>
+        
+        <!-- Barra Inferiore -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brand. Tutti i diritti riservati.</p>
+        </div>
+    </div>
+</footer>

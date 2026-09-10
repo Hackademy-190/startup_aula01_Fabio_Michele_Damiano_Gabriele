@@ -1,0 +1,52 @@
+
+/* Base Navbar */
+.navbar-custom {
+  background-color: var(--charcoal-blue);
+  border-bottom: 2px solid var(--deep-teal);
+  padding: 0.8rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Brand */
+.navbar-custom .navbar-brand {
+  color: var(--alabaster-grey);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: var(--muted-teal);
+}
+
+/* Links di Navigazione */
+.navbar-custom .nav-link {
+  color: var(--alabaster-grey);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: var(--muted-teal);
+}
+
+/* Effetto Underline Animato */
+.navbar-custom .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 2px;
+  left: 50%;
+  background-color: var(--muted-teal);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+  width: 75%;
+}
