@@ -5,14 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Bootstrap demo</title>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <!-- Font Awesome Icone-->
+        {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <!-- Font Awesome Icone--> --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     </head>
     <body>
-         {{--  bg di prova --}}
-    <div class="vh-100 text-center py-5" style="background-color:#20282c">
-        <div>
+        <x-navbar />
+        <div class="vh-100 d-flex" style="background-color:#20282c">
             {{$slot}}
         </div>
+        <x-footer />
     </body>
 </html>

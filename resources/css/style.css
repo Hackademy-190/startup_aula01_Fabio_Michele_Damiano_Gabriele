@@ -20,3 +20,8 @@
   --border-subtle: var(--clr-dark-slate);
 }
 
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'Space Mono', sans-serif;
+    color: var(--clr-alabaster);
+}
+

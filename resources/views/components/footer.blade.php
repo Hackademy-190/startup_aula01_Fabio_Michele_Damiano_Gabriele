@@ -8,7 +8,7 @@
                     Logo
                 </a>
                 <p class="brand-desc">
-                    Creiamo esperienze digitali uniche, unendo design moderno e funzionalità avanzate per far crescere la tua attività.
+                    Sviluppiamo soluzioni web efficienti e manutenibili, dalla progettazione tecnica alla messa online.
                 </p>
                 <div class="social-links">
                     <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -25,9 +25,9 @@
                 <h4>Navigazione</h4>
                 <ul class="footer-links">
                     <li><a href="{{ route('welcome') }}">Home</a></li>
-                    <li><a href="{{ route('progetti') }}">Progetti</a></li>
-                    <li><a href="{{ route('contact') }}">Chi Siamo</a></li>
-                    <li><a href="{{ route('chi-siamo') }}">Contatti</a></li>
+                    <li><a href="{{ route('blog') }}">Blog</a></li>
+                    <li><a href="{{ route('contact') }}">Contatti</a></li>
+                    <li><a href="{{ route('chi-siamo') }}">Chi Siamo</a></li>
                 </ul>
             </div>
             
@@ -35,15 +35,16 @@
             <div class="footer-col">
                 <h4>Servizi</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">Consulenza Digital</a></li>
+                    <li><a href="#">Sviluppo frontend</a></li>
+                    <li><a href="#">Backend e API</a></li>
+                    <li><a href="#">Manutenzione web</a></li>
                 </ul>
             </div>
             
             <!-- Colonna 4: Newsletter -->
             <div class="footer-col newsletter-col">
                 <h4>Newsletter</h4>
-                <p>Iscriviti per ricevere aggiornamenti e novità su i nostri progetti.</p>
+                <p>Contattaci per discutere il tuo progetto web e individuare la soluzione tecnica più adatta.</p>
                 <form class="newsletter-form";>
                     <input type="email" placeholder="Inserisci la tua email" required />
                     <button type="submit" class="btn-newsletter">Iscriviti</button>
