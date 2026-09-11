@@ -2,7 +2,7 @@
     <!--Il nostro team-->
     <section class="container py-5 text-center">
 
-        <div class="row team-grid justify-content-center text-center g-4">
+        <div class="row text-center g-4">
 
             <div class="col-12">
                 <h2 class="section-title">Chi Siamo</h2>

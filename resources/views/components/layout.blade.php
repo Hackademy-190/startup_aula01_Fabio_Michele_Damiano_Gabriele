@@ -13,7 +13,7 @@
     </head>
     <body>
         <x-navbar />
-        <div class="min-vh-100 d-flex align-items-center" style="background-color:#20282c">
+        <div class="min-vh-100" style="background-color:#20282c">
             {{$slot}}
         </div>
         <x-footer />
