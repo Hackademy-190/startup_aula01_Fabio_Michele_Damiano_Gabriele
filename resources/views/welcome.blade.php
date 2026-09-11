@@ -65,7 +65,7 @@
                             <span class="tech-badge">API REST</span>
                         </div>
                         
-                        <a href="#contact" class="service-link text-decoration-none fw-semibold small d-inline-flex align-items-center gap-1">
+                        <a href="{{ route('contact') }}" class="service-link text-decoration-none fw-semibold small d-inline-flex align-items-center gap-1">
                             Scopri la soluzione <i class="bi bi-arrow-right transition-icon"></i>
                         </a>
                     </div>
@@ -121,7 +121,7 @@
                             <span class="tech-badge">Audit</span>
                         </div>
 
-                        <a href="#contact" class="service-link text-decoration-none fw-semibold small d-inline-flex align-items-center gap-1">
+                        <a href="{{ route('contact') }}" class="service-link text-decoration-none fw-semibold small d-inline-flex align-items-center gap-1">
                             Scopri la soluzione <i class="bi bi-arrow-right transition-icon"></i>
                         </a>
                     </div>
@@ -132,7 +132,64 @@
     </div>
 </section>
 
-    <!-- 4. BANNER FINALE -->
+    <!-- 4. CAROSELLO FINALE -->
+    <section class="home-carousel-section py-5">
+        <div class="container">
+            <div class="home-carousel-intro text-center">
+                <span class="blog-eyebrow d-block mb-2">// IL NOSTRO APPROCCIO</span>
+                <h2>Idee che diventano prodotti digitali</h2>
+                <p class="blog-excerpt mx-auto mb-0">
+                    Un assaggio del modo in cui uniamo design, tecnologia e attenzione ai dettagli per costruire soluzioni efficaci.
+                </p>
+            </div>
+
+            <div id="homeCarousel" class="carousel slide home-carousel" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/1920/1080" class="d-block w-100" alt="Paesaggio astratto per sviluppo web">
+                            <div class="carousel-caption">
+                                <span class="blog-eyebrow d-block">// SVILUPPO WEB</span>
+                                <h2>Esperienze digitali solide</h2>
+                                <p>Progettiamo interfacce veloci, accessibili e pronte a crescere con il tuo business.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/1921/1081" class="d-block w-100" alt="Paesaggio astratto per architettura software">
+                            <div class="carousel-caption">
+                                <span class="blog-eyebrow d-block">// SOFTWARE SU MISURA</span>
+                                <h2>Strumenti costruiti intorno a te</h2>
+                                <p>Trasformiamo processi complessi in soluzioni semplici da usare e mantenere.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/1922/1082" class="d-block w-100" alt="Paesaggio astratto per cloud e sicurezza">
+                            <div class="carousel-caption">
+                                <span class="blog-eyebrow d-block">// CLOUD &amp; SECURITY</span>
+                                <h2>Infrastrutture pronte per il futuro</h2>
+                                <p>Rendiamo il tuo stack più resiliente, sicuro e semplice da evolvere.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Precedente</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Successiva</span>
+                    </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. BANNER FINALE -->
     <section class="py-5 my-4" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
         <div class="container py-4">
             <span class="blog-eyebrow d-block mb-2">// AVVIA IL TUO PROGETTO</span>
@@ -142,42 +199,55 @@
             </p>
             <a href="{{ route('contact') }}" class="btn-primario fs-6 px-4 py-3">Richiedi una Consulenza Tecnica</a>
         </div>
-    </section> --}}
+    </section>
 
-    <!-- 5. CAROSELLO FINALE -->
-    <section class="home-carousel-section py-5">
-        <div class="container">
-            <div id="homeCarousel" class="carousel slide home-carousel" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
+    <!-- 6. RECENSIONI -->
+    <section class="reviews-section py-5">
+        <div class="container py-4">
+            <div class="reviews-intro text-center">
+                <span class="blog-eyebrow d-block mb-2">// COSA DICONO DI NOI</span>
+                <h2>Le recensioni dei nostri clienti</h2>
+                <p class="blog-excerpt mx-auto mb-0">
+                    Il valore di un progetto si vede anche dal rapporto che costruiamo lungo il percorso.
+                </p>
+            </div>
 
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://picsum.photos/1920/1080" class="d-block w-100" alt="Paesaggio astratto per sviluppo web">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://picsum.photos/1921/1081" class="d-block w-100" alt="Paesaggio astratto per architettura software">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://picsum.photos/1922/1082" class="d-block w-100" alt="Paesaggio astratto per cloud e sicurezza">
-                    </div>
-                </div>
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-rating" aria-label="5 stelle">★★★★★</div>
+                    <blockquote>
+                        “Ci hanno aiutato a trasformare un'idea complessa in una piattaforma chiara, veloce e semplice da usare.”
+                    </blockquote>
+                    <footer>
+                        <strong>Laura Bianchi</strong>
+                        <span>Product Manager</span>
+                    </footer>
+                </article>
 
-                <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Precedente</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Successiva</span>
-                </button>
+                <article class="review-card">
+                    <div class="review-rating" aria-label="5 stelle">★★★★★</div>
+                    <blockquote>
+                        “Un team concreto e disponibile, capace di trovare soluzioni efficaci anche nei momenti più delicati.”
+                    </blockquote>
+                    <footer>
+                        <strong>Marco Ferri</strong>
+                        <span>Founder, North Studio</span>
+                    </footer>
+                </article>
+
+                <article class="review-card">
+                    <div class="review-rating" aria-label="5 stelle">★★★★★</div>
+                    <blockquote>
+                        “Finalmente un partner tecnico che parla il linguaggio del business e consegna risultati misurabili.”
+                    </blockquote>
+                    <footer>
+                        <strong>Giulia Romano</strong>
+                        <span>Operations Director</span>
+                    </footer>
+                </article>
             </div>
         </div>
     </section>
-
 </main>
 
 

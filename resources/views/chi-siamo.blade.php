@@ -22,4 +22,42 @@
             @endforeach
         </div>
     </section>
+
+    <div class="about-sections">
+        <section class="about-panel text-start">
+            <div class="about-panel-content">
+                <div class="about-panel-layout">
+                    <div>
+                        <span class="blog-eyebrow d-block">// LA NOSTRA MISSIONE</span>
+                        <h2>Costruire tecnologia che semplifica</h2>
+                        <p>
+                            Aiutiamo aziende e persone a trasformare idee e processi complessi in prodotti digitali chiari, affidabili e utili ogni giorno.
+                        </p>
+                        <p class="mb-0">
+                            Lavoriamo con attenzione a performance, sicurezza e manutenibilita, per creare soluzioni che continuano a dare valore nel tempo.
+                        </p>
+                    </div>
+                    <img src="https://picsum.photos/1920/1080" alt="Team al lavoro su un progetto digitale">
+                </div>
+            </div>
+        </section>
+
+        <section class="about-panel about-panel-history text-start">
+            <div class="about-panel-content">
+                <div class="about-panel-layout about-panel-layout-reverse">
+                    <div>
+                        <span class="blog-eyebrow d-block">// LA NOSTRA STORIA</span>
+                        <h2>Esperienza, curiosita e collaborazione</h2>
+                        <p>
+                            Siamo nati dall'incontro tra competenze diverse e dalla voglia di affrontare il digitale con un approccio concreto, umano e orientato ai risultati.
+                        </p>
+                        <p class="mb-0">
+                            Da allora continuiamo a crescere insieme, condividendo conoscenze e costruendo rapporti duraturi con chi lavora al nostro fianco.
+                        </p>
+                    </div>
+                    <img src="https://picsum.photos/1920/1080" alt="Collaborazione e crescita del team">
+                </div>
+            </div>
+        </section>
+    </div>
 </x-layout>

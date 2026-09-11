@@ -3,10 +3,14 @@
   background-color: var(--charcoal-blue);
   border-bottom: 2px solid var(--deep-teal);
   padding: 0.8rem 1.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.navbar-custom.navbar-hidden {
+  transform: translateY(-100%);
 }
 
 /* Brand */

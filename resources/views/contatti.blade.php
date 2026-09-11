@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="contact-section container">
+git     <div class="contact-section container">
         <div class="row align-items-center justify-content-center g-5">
             <div class="col-12 col-lg-6">
                 <div class="contact-intro">

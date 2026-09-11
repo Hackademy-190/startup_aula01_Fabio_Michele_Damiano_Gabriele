@@ -28,21 +28,33 @@ class PublicController extends Controller
         return [
             [
                 'id' => 1,
-                'title' => 'Lorem ipsum dolor 1',
+                'title' => 'Architettura modulare per progetti software scalabili',
                 'date' => '10 settembre 2026',
-                'content' => 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                'content' => 'Costruire applicazioni capaci di crescere nel tempo richiede rigore e una visione strutturale solida fin dalla prima riga di codice. Quando un progetto digitale comincia a espandersi, la complessita tecnica aumenta in modo esponenziale e solo una netta separazione tra dati, logica di elaborazione e presentazione visiva puo evitare il collasso del sistema.
+
+                Organizzare la base di codice in moduli del tutto autonomi favorisce la collaborazione quotidiana e rende la manutenzione ordinaria un compito lineare. Invece di concentrare compiti eterogenei dentro file giganti e ingestibili, distribuire le responsabilita permette di circoscrivere i problemi nel momento esatto in cui emergono. In questo modo ogni membro del team puo intervenire su una specifica funzione senza il timore di compromettere il lavoro dei colleghi.
+                
+                Scegliere pattern strutturali chiari riduce drasticamente il tempo impiegato nella ricerca e correzione di regressioni impreviste durante i rilasci. Mantenere il codice pulito e ordinato rappresenta il miglior investimento possibile per garantire longevita, efficienza e sostenibilita economica a qualunque piattaforma digitale.',
             ],
             [
                 'id' => 2,
-                'title' => 'Lorem ipsum dolor 2',
+                'title' => 'Strategie pratiche per massimizzare la velocita sul web',
                 'date' => '3 settembre 2026',
-                'content' => 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                'content' => 'Le prestazioni di una pagina web determinano in modo diretto la soddisfazione del pubblico e il posizionamento sui motori di ricerca. Ridurre il peso delle risorse grafiche, minimizzare i file JavaScript ed eliminare le dipendenze inutili consente di servire schermate veloci anche a utenti con connessioni lente o instabili.
+
+                Ottimizzare la fase di rendering richiede una attenzione costante verso il comportamento del browser. Configurare una efficace memorizzazione temporanea sul server, posticipare il caricamento delle risorse secondarie e frammentare i pacchetti di codice sono passaggi cruciali per assicurare una navigazione fluida e priva di intoppi.
+                
+                Ogni frazione di secondo risparmiata durante la visualizzazione iniziale trattiene visitatori preziosi e riduce sensibilmente il tasso di abbandono su ogni dispositivo. La velocita non deve mai essere trattata come una rifinitura secondaria, ma come un requisito tecnico centrale da misurare e difendere durante ogni fase del ciclo di vita del progetto.',
             ],
             [
                 'id' => 3,
-                'title' => 'Lorem ipsum dolor 3',
+                'title' => 'Cultura del test e documentazione continua nel team',
                 'date' => '27 agosto 2026',
-                'content' => 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                'content' => 'La qualita finale di una applicazione dipende dai processi di controllo implementati prima del rilascio sui server di produzione. Introdurre una serie di controlli automatici consente di individuare anomalie nascoste prima che raggiungano gli utenti finali, proteggendo la reputazione del marchio e la continuita del servizio.
+
+                Scrivere controlli unitari e verifiche di integrazione crea una rete di protezione indispensabile quando si modifica una sezione critica del software. Sapere con certezza matematica che le funzionalita storiche continuano a operare senza errori permette di rilasciare aggiornamenti continui con serenita e frequenza elevata.
+                
+                Accompagnare il codice sorgente con convenzioni di scrittura uniformi e una documentazione chiara facilita la comprensione della struttura complessiva. Questo metodo di lavoro consente a qualunque nuovo collega di integrarsi rapidamente nei compiti quotidiani, evitando fraintendimenti e proteggendo il valore del lavoro costruito nel tempo.',
             ],
         ];
     }
