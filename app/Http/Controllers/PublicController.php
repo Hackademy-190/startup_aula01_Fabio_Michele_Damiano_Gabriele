@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactFormMail;
+
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -107,7 +106,7 @@ class PublicController extends Controller
                 'id' => 3,
                 'nome' => 'Damiano Ricci',
                 'ruolo' => 'Ingegnere del Software',
-                'descrizione' => "Damiano è l'ingegnere del software della nostra azienda. Si occupa dello sviluppo e della manutenzione delle nostre applicazioni.",
+                'descrizione' => "Damiano è l'ingegnere del software della nostra azienda. Si occupa dello sviluppo e della manutenzione delle nostre 'MILLEMILA' applicazioni.",
                 'immagine' => 'media/damiano.jpg',
             ],
             [
@@ -137,25 +136,13 @@ class PublicController extends Controller
     public function contattiSubmit(Request $request)
     {
         // 1. Valida i dati del form
-       $formData = $request->validate([
+        $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'message' => 'required|string',
         ]);
 
-        // 2. INVIA L'EMAIL (Questa è la parte che mancava!)
-        // Sostituisci 'TUA_EMAIL_DI_TEST@esempio.com' con l'indirizzo che deve ricevere il modulo contatti
-        Mail::to('hello@example.com')->send(new ContactFormMail($formData));
-
-
-        // La logica per gestire l'invio del form (es. invio email)
-             return back()->with('success', 'Messaggio inviato con successo!');
-        }
-        
-    // // // 2. Invia la mail usando Mail::raw (invia testo puro senza bisogno di creare classi Mailable)
-    // // Mail::to("")->send(new \Illuminate\Mail\Message(function ($message) use ($nome, $messaggio) {
-    // //     $message->to('test@example.com')
-    // //             ->subject('Nuovo Contatto dal Sito')
-    // //             ->body("Nuovo messaggio da: $nome. Testo: $messaggio");
-    // // }));
+        // 2. Torna indietro alla pagina dei contatti con un messaggio di successo
+        return redirect()->back()->with('success', 'Messaggio inviato con successo!');
+    }
 }
