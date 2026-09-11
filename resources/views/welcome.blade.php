@@ -216,11 +216,11 @@
                 <article class="review-card">
                     <div class="review-rating" aria-label="5 stelle">★★★★★</div>
                     <blockquote>
-                        “Ci hanno aiutato a trasformare un'idea complessa in una piattaforma chiara, veloce e semplice da usare.”
+                        “Team davvero disponibile e professionale, purtroppo non hanno votato Donald Trump quindi non gli ho dato € 10.000.”
                     </blockquote>
                     <footer>
-                        <strong>Laura Bianchi</strong>
-                        <span>Product Manager</span>
+                        <strong>Elon Musk</strong>
+                        <span>CEO, Tesla</span>
                     </footer>
                 </article>
 
@@ -230,19 +230,19 @@
                         “Un team concreto e disponibile, capace di trovare soluzioni efficaci anche nei momenti più delicati.”
                     </blockquote>
                     <footer>
-                        <strong>Marco Ferri</strong>
-                        <span>Founder, North Studio</span>
+                        <strong>Gerry Scotti</strong>
+                        <span>Prime Minister, Italy</span>
                     </footer>
                 </article>
 
                 <article class="review-card">
                     <div class="review-rating" aria-label="5 stelle">★★★★★</div>
                     <blockquote>
-                        “Finalmente un partner tecnico che parla il linguaggio del business e consegna risultati misurabili.”
+                        “Ottimo lavoro e grande professionalità. Sono rimasto impressionato dal loro approccio e dai risultati ottenuti.”
                     </blockquote>
                     <footer>
-                        <strong>Giulia Romano</strong>
-                        <span>Operations Director</span>
+                        <strong>Tony Stark</strong>
+                        <span>CEO, Stark Industries</span>
                     </footer>
                 </article>
             </div>
