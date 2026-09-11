@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-custom">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{ route('welcome') }}">Logo</a>
+    <a class="navbar-brand" href="{{ route('welcome') }}"><img class="icon" src="{{ Vite::asset('public/media/icon.png') }}" alt=""></a>
 
     <!-- Pulsante Hamburger -->
 
