@@ -214,7 +214,7 @@
 
             <div class="reviews-grid">
                 <article class="review-card">
-                    <div class="review-rating" aria-label="5 stelle">★★★★★</div>
+                    <div class="review-rating" aria-label="4 stelle">★★★★</div>
                     <blockquote>
                         “Team davvero disponibile e professionale, purtroppo non hanno votato Donald Trump quindi non gli ho dato € 10.000.”
                     </blockquote>
