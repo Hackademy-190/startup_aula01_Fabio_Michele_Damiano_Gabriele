@@ -111,6 +111,8 @@
 
 /* Link del Footer */
 .footer-links {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 

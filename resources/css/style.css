@@ -18,6 +18,7 @@
     --brand-accent: var(--clr-muted-teal);
     --border-subtle: var(--clr-dark-slate);
 }
+
 h1,h2,h3,h4,h5,h6,p {
     color: var(--clr-alabaster);
     font-family: 'Space Mono', sans-serif;
@@ -155,6 +156,190 @@ h1,h2,h3,h4,h5,h6,p {
     white-space: nowrap;
 }
 
+.home-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.home-hero::before {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: '';
+    background-color: rgba(17, 17, 17, 0.60);
+    pointer-events: none;
+}
+
+.home-hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.home-hero-video {
+    z-index: 0;
+    opacity: 1;
+    filter: none;
+    object-fit: cover;
+}
+
+.home-hero-content {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+}
+
+.home-carousel-section {
+    margin-top: 80px;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+    border-top: 1px solid var(--border-subtle);
+    border-color: var(--border-subtle) !important;
+}
+
+.home-carousel {
+    max-width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+}
+
+.home-carousel .carousel-item {
+    aspect-ratio: 16 / 9;
+    background-color: var(--bg-surface);
+}
+
+.home-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-form-panel {
+    padding: 32px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+}
+
+.contact-section {
+    padding-top: 80px;
+    padding-bottom: 112px;
+}
+
+.contact-intro {
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.contact-intro h1 {
+    color: var(--text-main);
+}
+
+.contact-form {
+    font-family: 'Space Mono', sans-serif;
+}
+
+.contact-field {
+    margin-bottom: 15px;
+}
+
+.contact-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.contact-field input,
+.contact-field textarea {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    color: var(--text-main);
+    background-color: var(--bg-page);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    outline: none;
+}
+
+.contact-form .btn-primario {
+    width: 100%;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: var(--brand-accent);
+    box-shadow: 0 0 0 2px rgba(132, 169, 140, 0.16);
+}
+
+.contact-error {
+    color: #f28b82;
+    font-size: 12px;
+}
+
+.contact-success {
+    margin-bottom: 15px;
+    padding: 10px;
+    color: var(--text-main);
+    background-color: rgba(132, 169, 140, 0.14);
+    border: 1px solid var(--brand-accent);
+    border-radius: 6px;
+}
+
+.team-section {
+    padding-top: 80px;
+    padding-bottom: 112px;
+}
+
+.team-intro {
+    max-width: 760px;
+    margin: 0 auto 64px;
+}
+
+.section-title {
+    color: var(--text-main);
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.team-card h5 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    white-space: nowrap;
+    color: var(--text-main);
+}
+
+.team-card p {
+    min-height: 1.7em;
+    color: var(--text-muted);
+}
+
+.team-card .btn-primario {
+    margin-top: auto;
+    width: 100%;
+}
+
 /* Blog: pagina del singolo articolo */
 
 .blog-article {
@@ -204,6 +389,17 @@ h1,h2,h3,h4,h5,h6,p {
         font-size: 40px;
     }
 
+    .contact-section {
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
+
+    .home-carousel-section {
+        margin-top: 48px;
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+    }
+
     .blog-item {
         display: block;
     }
@@ -220,6 +416,34 @@ h1,h2,h3,h4,h5,h6,p {
 
     .blog-article-header h1 {
         font-size: 36px;
+    }
+
+    .contact-form-panel {
+        padding: 24px;
+    }
+
+    .team-section {
+        padding-top: 48px;
+        padding-bottom: 64px;
+    }
+
+    .team-intro {
+        margin-bottom: 48px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card h5 {
+        white-space: normal;
     }
 }
 
