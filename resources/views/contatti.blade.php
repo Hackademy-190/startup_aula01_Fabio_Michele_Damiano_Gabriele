@@ -28,7 +28,7 @@
                 @error('message') <span style="color: red; font-size: 12px;">{{ $message }}</span> @enderror
             </div>
 
-            <button type="submit" style="padding: 10px 20px; background: blue; color: white; border: none; cursor: pointer;">
+            <button class="btn-primario" type="submit">
                 Invia
             </button>
         </form>
