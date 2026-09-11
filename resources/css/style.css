@@ -756,6 +756,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* --- FOOTER RESPONSIVE ADATTIVO --- */
+
 @media (max-width: 991.98px) {
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -775,7 +776,7 @@ h1, h2, h3, h4, h5, h6, p {
     }
     
     .footer-col h4::after {
-        margin: 0.4rem auto 0; /* Centra la linea decorativa sotto i titoli */
+        margin: 0.4rem auto 0; 
     }
     
     .social-links {
@@ -783,7 +784,7 @@ h1, h2, h3, h4, h5, h6, p {
     }
     
     .footer-links a:hover {
-        transform: translateY(-2px); /* Su mobile evita lo spostamento orizzontale */
+        transform: translateY(-2px);
     }
     
     .newsletter-form input {
