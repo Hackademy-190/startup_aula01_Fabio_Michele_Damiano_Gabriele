@@ -1,7 +1,7 @@
 <x-layout>
     <main class="blog-section container">
         <header class="blog-header">
-            <p class="blog-eyebrow">Approfondimenti tecnici</p>
+            <p class="blog-eyebrow">// Approfondimenti tecnici</p>
             <h1>Blog</h1>
             <p>Articoli e riflessioni su sviluppo web, applicazioni digitali e tecnologia.</p>
         </header>

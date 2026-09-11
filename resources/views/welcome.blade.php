@@ -11,8 +11,12 @@
 <main class="text-center d-flex align-item-center flex-column" style="background-color: var(--bg-page);">
 
     <!-- 1. HERO SECTION-->
-    <header class="min-vh-100 d-flex align-items-center justify-content-center border-bottom py-5" style="border-color: var(--border-subtle) !important;">
-        <div class="container">
+    <header class="home-hero min-vh-100 d-flex align-items-center justify-content-center border-bottom py-5" style="border-color: var(--border-subtle) !important;">
+        <video class="home-hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+            <source src="./media/hero-video.mp4" type="video/mp4">
+        </video>
+
+        <div class="container home-hero-content">
             <div class="row justify-content-center">
                 <div class="col-11 col-md-9 col-lg-8 mx-auto">
                     <span class="blog-eyebrow d-block mb-2">// WEB ENGINEERING &amp; SOFTWARE</span>
@@ -93,7 +97,7 @@
         </div>
     </section>
 
-    <!-- 4. BANNER FINALE -->
+    {{-- <!-- 4. BANNER FINALE -->
     <section class="py-5 my-4" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
         <div class="container py-4">
             <span class="blog-eyebrow d-block mb-2">// AVVIA IL TUO PROGETTO</span>
@@ -102,6 +106,40 @@
                 Analizziamo il tuo stack attuale e proponiamo una roadmap di sviluppo concreta senza impegno.
             </p>
             <a href="{{ route('contact') }}" class="btn-primario fs-6 px-4 py-3">Richiedi una Consulenza Tecnica</a>
+        </div>
+    </section> --}}
+
+    <!-- 5. CAROSELLO FINALE -->
+    <section class="home-carousel-section py-5">
+        <div class="container">
+            <div id="homeCarousel" class="carousel slide home-carousel" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/1920/1080" class="d-block w-100" alt="Paesaggio astratto per sviluppo web">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1921/1081" class="d-block w-100" alt="Paesaggio astratto per architettura software">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1922/1082" class="d-block w-100" alt="Paesaggio astratto per cloud e sicurezza">
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Precedente</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Successiva</span>
+                </button>
+            </div>
         </div>
     </section>
 

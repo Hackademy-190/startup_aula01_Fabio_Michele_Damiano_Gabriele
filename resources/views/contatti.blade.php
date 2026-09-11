@@ -1,45 +1,48 @@
 <x-layout>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Contattaci</h1>
-        
-        <!-- Creiamo una riga flessibile che centra il contenuto in orizzontale -->
-        <div class="row justify-content-center">
-            <!-- Definiamo la larghezza del form (es. col-md-6 o col-lg-4) -->
-            <div class="col-12 col-md-6 col-lg-4">
-                
-                <form action="{{ route('contact.submit') }}" method="POST" style="font-family: sans-serif;">
-                    @csrf
+    <div class="contact-section container">
+        <div class="row align-items-center justify-content-center g-5">
+            <div class="col-12 col-lg-6">
+                <div class="contact-intro">
+                    <span class="blog-eyebrow d-block mb-2">// PARLIAMO DEL TUO PROGETTO</span>
+                    <h1 class="mb-3">Invia una richiesta</h1>
+                    <p class="blog-excerpt mb-0">
+                        Raccontaci la tua idea o il problema che vuoi risolvere. Ti risponderemo per capire insieme la soluzione piu adatta.
+                    </p>
+                </div>
+            </div>
 
-                    @if(session('success'))
-                        <div style="color: green; padding: 10px; background: #e6f4ea; margin-bottom: 15px;">
-                            {{ session('success') }}
+            <div class="col-12 col-lg-6">
+                <div class="contact-form-panel">
+                    <form action="{{ route('contact.submit') }}" method="POST" class="contact-form">
+                        @csrf
+
+                        @if(session('success'))
+                            <div class="contact-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        <div class="contact-field">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                            @error('name') <span class="contact-error">{{ $message }}</span> @enderror
                         </div>
-                    @endif
 
-                    <div style="margin-bottom: 15px;">
-                        <label for="name" style="display: block; margin-bottom: 5px;">Nome</label>
-                        <input type="text" id="name" name="name" required style="width: 100%; padding: 8px;">
-                        @error('name') <span style="color: red; font-size: 12px;">{{ $message }}</span> @enderror
-                    </div>
+                        <div class="contact-field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            @error('email') <span class="contact-error">{{ $message }}</span> @enderror
+                        </div>
 
-                    <div style="margin-bottom: 15px;">
-                        <label for="email" style="display: block; margin-bottom: 5px;">Email</label>
-                        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px;">
-                        @error('email') <span style="color: red; font-size: 12px;">{{ $message }}</span> @enderror
-                    </div>
+                        <div class="contact-field">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                            @error('message') <span class="contact-error">{{ $message }}</span> @enderror
+                        </div>
 
-                    <div style="margin-bottom: 15px;">
-                        <label for="message" style="display: block; margin-bottom: 5px;">Messaggio</label>
-                        <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 8px;"></textarea>
-                        @error('message') <span style="color: red; font-size: 12px;">{{ $message }}</span> @enderror
-                    </div>
-
-                    <!-- Centriamo anche il pulsante di invio se preferisci, oppure lascialo così -->
-                    <button type="submit" style="padding: 10px 20px; background: blue; color: white; border: none; cursor: pointer; width: 100%;">
-                        Invia
-                    </button>
-                </form>
-
+                        <button class="btn-primario" type="submit">Invia</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
