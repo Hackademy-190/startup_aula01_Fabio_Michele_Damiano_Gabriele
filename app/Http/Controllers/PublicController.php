@@ -19,6 +19,7 @@ class PublicController extends Controller
     public function blogShow($id)
     {
         $post = collect($this->posts())->firstWhere('id', $id);
+
         return view('blog-show', compact('post'));
     }
 
@@ -46,14 +47,90 @@ class PublicController extends Controller
         ];
     }
 
+    public function chiSiamo()
+    {
+
+        $team = [
+            [
+                'id' => 1,
+                'nome' => 'Michele Giovanni Noviello',
+                'ruolo' => 'CEO',
+                'descrizione' => 'Michele è il fondatore e CEO della nostra azienda. Con oltre 20 anni di esperienza nel settore, guida il team con passione e dedizione.',
+                'immagine' => 'media/michele.jpg',
+            ],
+            [
+                'id' => 2,
+                'nome' => 'Fabio Spanò',
+                'ruolo' => 'Operations Manager',
+                'descrizione' => "Fabio è il nostro Operations Manager. È responsabile della gestione operativa e dell'efficienza dei processi aziendali.",
+                'immagine' => 'media/fabio.jpg',
+            ],
+            [
+                'id' => 3,
+                'nome' => 'Damiano Ricci',
+                'ruolo' => 'Ingegnere del Software',
+                'descrizione' => "Damiano è l'ingegnere del software della nostra azienda. Si occupa dello sviluppo e della manutenzione delle nostre applicazioni.",
+                'immagine' => 'media/damiano.jpg',
+            ],
+            [
+                'id' => 4,
+                'nome' => 'Gabriele Nunnari',
+                'ruolo' => 'Art Director',
+                'descrizione' => 'Gabriele gestisce le strategie di marketing e comunicazione, assicurando che il nostro messaggio raggiunga il pubblico giusto.',
+                'immagine' => 'media/gabriele.jpg',
+            ],
+        ];
+
+        return view('chi-siamo', ['team' => $team]);
+    }
+
+    public function chiSiamoShow($id)
+    {
+
+        $team = [
+            [
+                'id' => 1,
+                'nome' => 'Michele Giovanni Noviello',
+                'ruolo' => 'CEO',
+                'descrizione' => 'Michele è il fondatore e CEO della nostra azienda. Con oltre 20 anni di esperienza nel settore, guida il team con passione e dedizione.',
+                'immagine' => 'media/michele.jpg',
+            ],
+            [
+                'id' => 2,
+                'nome' => 'Fabio Spanò',
+                'ruolo' => 'Operations Manager',
+                'descrizione' => "Fabio è il nostro Operations Manager. È responsabile della gestione operativa e dell'efficienza dei processi aziendali.",
+                'immagine' => 'media/fabio.jpg',
+            ],
+            [
+                'id' => 3,
+                'nome' => 'Damiano Ricci',
+                'ruolo' => 'Ingegnere del Software',
+                'descrizione' => "Damiano è l'ingegnere del software della nostra azienda. Si occupa dello sviluppo e della manutenzione delle nostre 'MILLEMILA' applicazioni.",
+                'immagine' => 'media/damiano.jpg',
+            ],
+            [
+                'id' => 4,
+                'nome' => 'Gabriele Nunnari',
+                'ruolo' => 'Art Director',
+                'descrizione' => 'Gabriele gestisce le strategie di marketing e comunicazione, assicurando che il nostro messaggio raggiunga il pubblico giusto.',
+                'immagine' => 'media/gabriele.jpg',
+            ],
+        ];
+
+        foreach ($team as $member) {
+            if ($id == $member['id']) {
+
+                return view('chi-siamo-show', ['member' => $member]);
+            }
+        }
+
+        return view('chi-siamo-show', ['team' => $team]);
+    }
+
     public function contatti()
     {
         return view('contatti');
-    }
-
-    public function chiSiamo()
-    {
-        return view('chi-siamo');
     }
 
     public function contattiSubmit(Request $request)
