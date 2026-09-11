@@ -2,7 +2,8 @@
 <main class="text-center d-flex align-items-center flex-column" style="background-color: var(--bg-page);">
 
     <!-- 1. HERO SECTION -->
-    <header class="hero-section min-vh-100 d-flex align-items-center justify-content-center py-5 w-100" style="border-color: var(--border-subtle) !important;">
+   <header class="hero-section min-vh-100 d-flex align-items-center justify-content-center py-5 w-100 position-relative" 
+        style="--hero-bg: url('{{ asset('media/WelcomeBG.jpg') }}'); border-color: var(--border-subtle) !important;">
         <div class="container py-4">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 mx-auto">
@@ -205,7 +206,7 @@
                         </div>
                         <footer>
                             <strong>Elon Musk</strong>
-                            <span class="d-block text-muted small">CEO, Tesla</span>
+                            <span class="d-block small">CEO, Tesla</span>
                         </footer>
                     </article>
                 </div>
@@ -220,7 +221,7 @@
                         </div>
                         <footer>
                             <strong>Gerry Scotti</strong>
-                            <span class="d-block text-muted small">Prime Minister, Italy</span>
+                            <span class="d-block small">Prime Minister, Italy</span>
                         </footer>
                     </article>
                 </div>
@@ -235,7 +236,7 @@
                         </div>
                         <footer>
                             <strong>Tony Stark</strong>
-                            <span class="d-block text-muted small">CEO, Stark Industries</span>
+                            <span class="d-block small">CEO, Stark Industries</span>
                         </footer>
                     </article>
                 </div>

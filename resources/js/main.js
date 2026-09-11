@@ -1,22 +1,14 @@
 document.documentElement.classList.add('hide-scrollbar');
 
 const navbar = document.querySelector('.navbar-custom');
-let previousScrollPosition = window.scrollY;
 
 window.addEventListener('scroll', () => {
-	const currentScrollPosition = window.scrollY;
-	const mobileMenu = navbar?.querySelector('.navbar-collapse.show');
+    if (!navbar) return;
 
-	if (!navbar || mobileMenu) {
-		return;
-	}
-
-	if (currentScrollPosition > previousScrollPosition && currentScrollPosition > navbar.offsetHeight) {
-		navbar.classList.add('navbar-hidden');
-	} else if (currentScrollPosition < previousScrollPosition) {
-		navbar.classList.remove('navbar-hidden');
-	}
-
-	previousScrollPosition = currentScrollPosition;
+    // Aggiunge la classe per rimpicciolire la barra quando si scende oltre 50px
+    if (window.scrollY > 50) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
 }, { passive: true });
-

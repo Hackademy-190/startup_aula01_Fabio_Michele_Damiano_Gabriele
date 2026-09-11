@@ -17,7 +17,9 @@
     --brand-primary: var(--clr-deep-teal);
     --brand-accent: var(--clr-muted-teal);
     --border-subtle: var(--clr-dark-slate);
+
 }
+
 
 html.hide-scrollbar {
     scrollbar-width: none;
@@ -32,13 +34,39 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'Space Mono', monospace, sans-serif;
 }
 
+/* --- HERO SECTION BACKGROUND --- */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 1;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hero-section > .container {
+    position: relative;
+    z-index: 2;
+}
+
+
 /* --- PULSANTI --- */
 .btn-primario {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 12px 24px;
+    padding: 12px 44px;
     border: none;
     border-radius: 8px;
     background-color: var(--clr-muted-teal);
@@ -60,7 +88,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .btn-primario:focus-visible {
-    outline: 2px solid var(--clr-deep-teal); /* Corretto: aggiunta variabile mancante --clr- */
+    outline: 2px solid var(--clr-deep-teal);
     outline-offset: 3px;
 }
 
@@ -194,8 +222,8 @@ h1, h2, h3, h4, h5, h6, p {
 /* --- CAROSELLO HOME --- */
 .home-carousel-section {
     margin-top: 80px;
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
+    padding-top: 80px;
+    padding-bottom: 80px;
     border-top: 1px solid var(--border-subtle);
 }
 
@@ -267,8 +295,8 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .service-card:hover {
-    transform: translateY(-5px); /* Corretto: rimosso il -100px ereditato dalla duplicazione */
-    border-color: var(--brand-accent) !important;
+    transform: translateY(-5px);
+    border-color: var(--brand-accent);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -608,8 +636,8 @@ h1, h2, h3, h4, h5, h6, p {
 
     .home-carousel-section {
         margin-top: 48px;
-        padding-top: 48px !important;
-        padding-bottom: 48px !important;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 
     .home-carousel .carousel-caption {
