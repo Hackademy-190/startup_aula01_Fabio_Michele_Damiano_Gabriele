@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Mail;
-
+use App\Mail\ContactFormMail;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -47,13 +47,6 @@ class PublicController extends Controller
             ],
         ];
     }
-<<<<<<< HEAD
-    public function contattiSubmit(Request $request) 
-    {
-    // 1. Recupera i dati inviati dal form
-    $nome = $request->input('name'); // controlla che l'input nel form abbia name="name"
-    $messaggio = $request->input('message'); // controlla che l'input abbia name="message"
-=======
 
     public function chiSiamo()
     {
@@ -144,24 +137,25 @@ class PublicController extends Controller
     public function contattiSubmit(Request $request)
     {
         // 1. Valida i dati del form
-        $request->validate([
+       $formData = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'message' => 'required|string',
         ]);
->>>>>>> 3a1bab4e79a0b2b6a802019c8d23f206a69935e6
 
-    // 2. Invia la mail usando Mail::raw (invia testo puro senza bisogno di creare classi Mailable)
-    Mail::to("")->send(new \Illuminate\Mail\Message(function ($message) use ($nome, $messaggio) {
-        $message->to('test@example.com')
-                ->subject('Nuovo Contatto dal Sito')
-                ->body("Nuovo messaggio da: $nome. Testo: $messaggio");
-    }));
+        // 2. INVIA L'EMAIL (Questa è la parte che mancava!)
+        // Sostituisci 'TUA_EMAIL_DI_TEST@esempio.com' con l'indirizzo che deve ricevere il modulo contatti
+        Mail::to('hello@example.com')->send(new ContactFormMail($formData));
 
-    return "Email inviata con successo! Controlla Mailtrap.";
-    }
-<<<<<<< HEAD
+
+        // La logica per gestire l'invio del form (es. invio email)
+             return back()->with('success', 'Messaggio inviato con successo!');
+        }
+        
+    // // // 2. Invia la mail usando Mail::raw (invia testo puro senza bisogno di creare classi Mailable)
+    // // Mail::to("")->send(new \Illuminate\Mail\Message(function ($message) use ($nome, $messaggio) {
+    // //     $message->to('test@example.com')
+    // //             ->subject('Nuovo Contatto dal Sito')
+    // //             ->body("Nuovo messaggio da: $nome. Testo: $messaggio");
+    // // }));
 }
-=======
-}
->>>>>>> 3a1bab4e79a0b2b6a802019c8d23f206a69935e6
