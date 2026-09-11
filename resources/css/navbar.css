@@ -1,33 +1,29 @@
 /* Base Navbar */
 .navbar-custom {
-  background-color: var(--charcoal-blue);
-  border-bottom: 2px solid var(--deep-teal);
+  background-color: var(--clr-charcoal);
+  border-bottom: 2px solid var(--clr-deep-teal);
   padding: 0.8rem 1.5rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.navbar-custom.navbar-hidden {
-  transform: translateY(-100%);
-}
-
 /* Brand */
 .navbar-custom .navbar-brand {
-  color: var(--alabaster-grey);
+  color: var(--clr-alabaster);
   font-weight: 700;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
 
 .navbar-custom .navbar-brand:hover {
-  color: var(--muted-teal);
+  color: var(--clr-muted-teal);
 }
 
 /* Links di Navigazione */
 .navbar-custom .nav-link {
-  color: var(--alabaster-grey);
+  color: var(--clr-alabaster);
   font-weight: 500;
   padding: 0.5rem 1rem;
   position: relative;
@@ -36,7 +32,7 @@
 
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
-  color: var(--muted-teal);
+  color: var(--clr-muted-teal);
 }
 
 /* Effetto Underline Animato */
@@ -47,7 +43,7 @@
   height: 2px;
   bottom: 2px;
   left: 50%;
-  background-color: var(--muted-teal);
+  background-color: var(--clr-muted-teal);
   transition: all 0.3s ease;
   transform: translateX(-50%);
 }
@@ -67,36 +63,21 @@ h1,h2,h3,h4,h5,h6,p,a,label,span,li,button{
 /* --- Adattamenti Responsive per Mobile / Tablet (< 992px) --- */
 @media (max-width: 991.98px) {
   .navbar-custom .navbar-collapse {
-    width: 100%;
-    background-color: var(--charcoal-blue);
+    background-color: var(--clr-charcoal); /* Corretto: sostituito il bianco (#ffffff) con lo sfondo scuro */
     margin-top: 10px;
-    padding: 12px 0;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--clr-dark-slate);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 
   .navbar-custom .nav-item {
-    width: 100%;
-    margin-bottom: 4px;
+    text-align: center; /* Allinea i link al centro su mobile */
+    margin-bottom: 8px;
   }
 
   .navbar-custom .nav-item:last-child {
     margin-bottom: 0;
-  }
-
-  .navbar-custom .nav-link {
-    display: block;
-    width: 100%;
-    padding: 0.75rem 1rem;
-    text-align: center;
-  }
-
-  .navbar-custom .navbar-toggler {
-    border-color: var(--muted-teal);
-  }
-
-  .navbar-custom .navbar-toggler-icon {
-    filter: invert(1);
   }
 }
 

@@ -27,11 +27,12 @@ html.hide-scrollbar::-webkit-scrollbar {
     display: none;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1, h2, h3, h4, h5, h6, p {
     color: var(--clr-alabaster);
-    font-family: 'Space Mono', sans-serif;
+    font-family: 'Space Mono', monospace, sans-serif;
 }
 
+/* --- PULSANTI --- */
 .btn-primario {
     display: inline-flex;
     align-items: center;
@@ -40,7 +41,7 @@ h1,h2,h3,h4,h5,h6,p {
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
-    background-color: var(--clr-muted-teal); /* corretto */
+    background-color: var(--clr-muted-teal);
     color: var(--clr-onyx);
     font-size: 15px;
     font-weight: 600;
@@ -52,31 +53,23 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .btn-primario:hover {
-    background-color: var(--clr-deep-teal); /* corretto */
-    color: var(--clr-alabaster);             /* corretto */
+    background-color: var(--clr-deep-teal);
+    color: var(--clr-alabaster);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btn-primario:focus-visible {
-    outline: 2px solid var(--clr-deep-teal); /* corretto */
+    outline: 2px solid var(--clr-deep-teal); /* Corretto: aggiunta variabile mancante --clr- */
     outline-offset: 3px;
 }
 
-/* Effetto di pressione */
 .btn-primario:active {
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Accessibilità tastiera */
-.btn-primario:focus-visible {
-    outline: 2px solid var(--deep-teal);
-    outline-offset: 3px;
-}
-
-/* Blog: lista degli articoli */
-
+/* --- BLOG: LISTA ARTICOLI --- */
 .blog-section {
     width: 100%;
     max-width: 900px;
@@ -164,6 +157,7 @@ h1,h2,h3,h4,h5,h6,p {
     white-space: nowrap;
 }
 
+/* --- HOME HERO VIDEO --- */
 .home-hero {
     position: relative;
     overflow: hidden;
@@ -184,14 +178,11 @@ h1,h2,h3,h4,h5,h6,p {
     inset: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
-}
-
-.home-hero-video {
     z-index: 0;
     opacity: 1;
     filter: none;
     object-fit: cover;
+    pointer-events: none;
 }
 
 .home-hero-content {
@@ -200,12 +191,12 @@ h1,h2,h3,h4,h5,h6,p {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
 }
 
+/* --- CAROSELLO HOME --- */
 .home-carousel-section {
     margin-top: 80px;
     padding-top: 80px !important;
     padding-bottom: 80px !important;
     border-top: 1px solid var(--border-subtle);
-    border-color: var(--border-subtle) !important;
 }
 
 .home-carousel-intro {
@@ -231,8 +222,14 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .home-carousel .carousel-item {
-    aspect-ratio: 16 / 9;
+    height: 350px;
     background-color: var(--bg-surface);
+}
+
+@media (min-width: 768px) {
+    .home-carousel .carousel-item {
+        height: 500px;
+    }
 }
 
 .home-carousel img {
@@ -245,9 +242,9 @@ h1,h2,h3,h4,h5,h6,p {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 72px 32px 28px;
+    padding: 48px 24px 24px;
     text-align: left;
-    background: linear-gradient(transparent, rgba(17, 17, 17, 0.88));
+    background: linear-gradient(transparent, rgba(17, 17, 17, 0.90));
 }
 
 .home-carousel .carousel-caption h2 {
@@ -262,6 +259,58 @@ h1,h2,h3,h4,h5,h6,p {
     color: var(--text-main);
 }
 
+/* --- CARD SERVIZI --- */
+.service-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Corretto: rimosso il -100px ereditato dalla duplicazione */
+    border-color: var(--brand-accent) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.icon-wrapper {
+    width: 44px;
+    height: 44px;
+    background-color: var(--clr-dark-slate);
+    color: var(--brand-accent);
+}
+
+.tech-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 11px;
+    color: var(--text-main);
+    background-color: var(--clr-jet-black);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+}
+
+.service-link {
+    color: var(--brand-accent);
+    transition: color 0.2s ease;
+}
+
+.service-link:hover {
+    color: var(--text-main);
+}
+
+.service-card .transition-icon {
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover .transition-icon {
+    transform: translateX(4px);
+}
+
+.tracking-wider {
+    letter-spacing: 0.08em;
+}
+
+/* --- RECENSIONI --- */
 .reviews-intro {
     max-width: 680px;
     margin: 0 auto 40px;
@@ -319,13 +368,7 @@ h1,h2,h3,h4,h5,h6,p {
     font-size: 13px;
 }
 
-.contact-form-panel {
-    padding: 32px;
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-}
-
+/* --- FORM DI CONTATTO --- */
 .contact-section {
     padding-top: 80px;
     padding-bottom: 112px;
@@ -340,8 +383,15 @@ h1,h2,h3,h4,h5,h6,p {
     color: var(--text-main);
 }
 
+.contact-form-panel {
+    padding: 32px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+}
+
 .contact-form {
-    font-family: 'Space Mono', sans-serif;
+    font-family: 'Space Mono', monospace, sans-serif;
 }
 
 .contact-field {
@@ -366,14 +416,14 @@ h1,h2,h3,h4,h5,h6,p {
     outline: none;
 }
 
-.contact-form .btn-primario {
-    width: 100%;
-}
-
 .contact-field input:focus,
 .contact-field textarea:focus {
     border-color: var(--brand-accent);
     box-shadow: 0 0 0 2px rgba(132, 169, 140, 0.16);
+}
+
+.contact-form .btn-primario {
+    width: 100%;
 }
 
 .contact-error {
@@ -390,6 +440,7 @@ h1,h2,h3,h4,h5,h6,p {
     border-radius: 6px;
 }
 
+/* --- SEZIONE CHI SIAMO / TEAM --- */
 .team-section {
     padding-top: 80px;
     padding-bottom: 112px;
@@ -501,8 +552,7 @@ h1,h2,h3,h4,h5,h6,p {
     width: 100%;
 }
 
-/* Blog: pagina del singolo articolo */
-
+/* --- BLOG: SINGOLO ARTICOLO --- */
 .blog-article {
     width: 100%;
     max-width: 800px;
@@ -540,6 +590,7 @@ h1,h2,h3,h4,h5,h6,p {
     line-height: 1.8;
 }
 
+/* --- MEDIA QUERIES RESPONSIVE --- */
 @media (max-width: 640px) {
     .blog-section {
         padding-top: 48px;
@@ -562,7 +613,7 @@ h1,h2,h3,h4,h5,h6,p {
     }
 
     .home-carousel .carousel-caption {
-        padding: 56px 20px 20px;
+        padding: 24px 16px 16px;
     }
 
     .home-carousel .carousel-caption h2 {
@@ -638,89 +689,4 @@ h1,h2,h3,h4,h5,h6,p {
     .team-card h5 {
         white-space: normal;
     }
-}
-
-/* Stile base delle Card */
-.service-card {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Effetto Hover sulla Card */
-.service-card:hover {
-    transform: translateY(-100px);
-    border-color: rgba(var(--bs-primary-rgb), 0.4);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-}
-
-/* Contenitore Icona */
-.icon-wrapper {
-    width: 48px;
-    height: 48px;
-    background-color: rgba(var(--bs-primary-rgb), 0.1);
-}
-
-/* Transizione Freccia CTA */
-.service-card .transition-icon {
-    transition: transform 0.2s ease;
-}
-
-.service-card:hover .transition-icon {
-    transform: translateX(4px);
-}
-
-/* Tracking lettera per eyebrow */
-.tracking-wider {
-    letter-spacing: 0.08em;
-}
-
-/* Card Servizi */
-.service-card {
-    background-color: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--brand-accent) !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* Box Icona */
-.icon-wrapper {
-    width: 44px;
-    height: 44px;
-    background-color: var(--clr-dark-slate);
-    color: var(--brand-accent);
-}
-
-/* Badge Tecnologie */
-.tech-badge {
-    display: inline-block;
-    padding: 3px 8px;
-    font-size: 11px;
-    color: var(--text-main);
-    background-color: var(--clr-jet-black);
-    border: 1px solid var(--border-subtle);
-    border-radius: 4px;
-}
-
-/* Link di azione nella card */
-.service-link {
-    color: var(--brand-accent);
-    transition: color 0.2s ease;
-}
-
-.service-link:hover {
-    color: var(--text-main);
-}
-
-.service-card .transition-icon {
-    transition: transform 0.2s ease;
-}
-
-.service-card:hover .transition-icon {
-    transform: translateX(4px);
 }
