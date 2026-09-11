@@ -11,11 +11,10 @@
 <main class="text-center d-flex align-item-center flex-column" style="background-color: var(--bg-page);">
 
     <!-- 1. HERO SECTION-->
-    <header class="min-vh-100 d-flex align-items-center justify-content-center border-bottom py-5" style="border-color: var(--border-subtle) !important;">
+    <header class="min-vh-100 d-flex align-items-center justify-content-center border-bottom py-5" style="border-color: var(--border-subtle);">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-11 col-md-9 col-lg-8 mx-auto">
-                    <span class="blog-eyebrow d-block mb-2">// WEB ENGINEERING &amp; SOFTWARE</span>
                     
                     <h1 class="display-4 fw-bold mb-3" style="color: var(--text-main);">
                         Sviluppo web affidabile per il tuo progetto
@@ -26,75 +25,115 @@
                     </p>
                     
                     <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 align-items-center">
-                        <a href="{{ route('contact') }}" class="btn-primario">Proponi il tuo progetto</a>
-                        <a href="{{ route('blog') }}" class="blog-read-more pt-0">Scopri i nostri progetti &rarr;</a>
+                        <a href="{{ route('blog') }}" class="btn-primario">Scopri i nostri progetti &rarr;</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 2. SERVIZI-->
-    <section class="py-5">
-        <div class="container py-4">
-            <div class="mb-5">
-                <span class="blog-eyebrow d-block mb-1">// COSA FACCIAMO</span>
-                <h2 class="fs-2 mb-0" style="color: var(--text-main);">Servizi di Sviluppo e Ingegneria</h2>
-            </div>
+<!-- 2. SERVIZI -->
+<section class="py-5">
+    <div class="container py-4">
+        <!-- Header Sezione -->
+        <div class="mb-5 text-center text-md-start">
+            <span class="blog-eyebrow d-block mb-2">// COSA FACCIAMO</span>
+            <h2 class="fs-2 mb-0 fw-bold">Servizi di Sviluppo e Ingegneria</h2>
+        </div>
 
-            <div class="row g-4 justify-content-center">
-                <div class="col-12 col-md-4">
-                    <div class="p-4 rounded-3 h-100 text-center" style="background-color: var(--bg-surface); border: 1px solid var(--border-subtle);">
-                        <h3 class="fs-5 mb-2" style="color: var(--text-main);">Web App &amp; SaaS</h3>
-                        <p class="blog-excerpt small mb-0">
+        <!-- Grid Servizi -->
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Card 1 -->
+            <div class="col-12 col-md-4">
+                <div class="service-card p-4 rounded-3 h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <div class="icon-wrapper mb-3 d-inline-flex align-items-center justify-content-center rounded-3">
+                            <i class="bi bi-window-stack fs-4"></i>
+                        </div>
+                        
+                        <h3 class="fs-5 mb-2 fw-semibold">Web App &amp; SaaS</h3>
+                        <p class="blog-excerpt small mb-3">
                             Applicazioni web complesse progettate per gestire moli elevate di dati con tempi di risposta minimi.
                         </p>
                     </div>
-                </div>
 
-                <div class="col-12 col-md-4">
-                    <div class="p-4 rounded-3 h-100 text-center" style="background-color: var(--bg-surface); border: 1px solid var(--border-subtle);">
-                        <h3 class="fs-5 mb-2" style="color: var(--text-main);">Software su Misura</h3>
-                        <p class="blog-excerpt small mb-0">
-                            Sviluppo di piattaforme proprietarie e gestionali custom cuciti sulle metriche del tuo business.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="p-4 rounded-3 h-100 text-center" style="background-color: var(--bg-surface); border: 1px solid var(--border-subtle);">
-                        <h3 class="fs-5 mb-2" style="color: var(--text-main);">Cloud &amp; Security</h3>
-                        <p class="blog-excerpt small mb-0">
-                            Infrastrutture resilienti, audit di sicurezza e refactoring per eliminare il debito tecnico.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. BANNER -->
-    <section class="py-3">
-        <div class="container">
-            <div class="p-4 rounded-3" style="background-color: var(--bg-surface); border: 1px solid var(--border-subtle);">
-                <div class="row align-items-center justify-content-center text-center g-3">
-                    <div class="col-12 col-lg-8 mx-auto">
-                        <span class="blog-eyebrow mb-1 d-block">// SOLUZIONI SU MISURA</span>
-                        <h2 class="fs-4 mb-2" style="color: var(--text-main);">Hai un'architettura software da aggiornare?</h2>
-                        <p class="blog-excerpt small mb-3">
-                            Progettiamo e ottimizziamo web app, e-commerce ad alte prestazioni e infrastrutture cloud scalabili.
-                        </p>
-                        <a href="{{ route('contact') }}" class="btn-primario py-2 px-3 fs-6">
-                            Richiedi Consulenza
+                    <div>
+                        <div class="d-flex flex-wrap gap-1 mb-3">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">API REST</span>
+                        </div>
+                        
+                        <a href="#contact" class="service-link text-decoration-none fw-semibold small d-inline-flex align-items-center gap-1">
+                            Scopri la soluzione <i class="bi bi-arrow-right transition-icon"></i>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- 4. BANNER FINALE -->
-    <section class="py-5 my-4" style="background-color: var(--bg-surface); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+            <!-- Card 2 -->
+            <div class="col-12 col-md-4">
+                <div class="service-card p-4 rounded-3 h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <div class="icon-wrapper mb-3 d-inline-flex align-items-center justify-content-center rounded-3">
+                            <i class="bi bi-code-slash fs-4"></i>
+                        </div>
+
+                        <h3 class="fs-5 mb-2 fw-semibold">Software su Misura</h3>
+                        <p class="blog-excerpt small mb-3">
+                            Sviluppo di piattaforme proprietarie e gestionali custom cuciti sulle metriche del tuo business.
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="d-flex flex-wrap gap-1 mb-3">
+                            <span class="tech-badge">Custom ERP</span>
+                            <span class="tech-badge">CRM</span>
+                            <span class="tech-badge">Workflow</span>
+                        </div>
+
+                        <a href="#contact" class="service-link text-decoration-none fw-semibold small d-inline-flex align-items-center gap-1">
+                            Scopri la soluzione <i class="bi bi-arrow-right transition-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-4">
+                <div class="service-card p-4 rounded-3 h-100 d-flex flex-column justify-content-between position-relative">
+                    <div>
+                        <div class="icon-wrapper mb-3 d-inline-flex align-items-center justify-content-center rounded-3">
+                            <i class="bi bi-shield-check fs-4"></i>
+                        </div>
+
+                        <h3 class="fs-5 mb-2 fw-semibold">Cloud &amp; Security</h3>
+                        <p class="blog-excerpt small mb-3">
+                            Infrastrutture resilienti, audit di sicurezza e refactoring per eliminare il debito tecnico.
+                        </p>
+                    </div>
+
+                    <div>
+                        <div class="d-flex flex-wrap gap-1 mb-3">
+                            <span class="tech-badge">AWS / Azure</span>
+                            <span class="tech-badge">DevOps</span>
+                            <span class="tech-badge">Audit</span>
+                        </div>
+
+                        <a href="#contact" class="service-link text-decoration-none fw-semibold small d-inline-flex align-items-center gap-1">
+                            Scopri la soluzione <i class="bi bi-arrow-right transition-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- 3. BANNER FINALE -->
+    <section class="py-5 my-4" style="background-color: var(--bg-surface); border-top: 3px solid var(--clr-deep-teal); border-bottom: 3px solid var(--clr-deep-teal);">
         <div class="container py-4">
             <span class="blog-eyebrow d-block mb-2">// AVVIA IL TUO PROGETTO</span>
             <h2 class="display-6 fw-bold mb-3" style="color: var(--text-main);">Hai un'idea o un'infrastruttura da scalare?</h2>

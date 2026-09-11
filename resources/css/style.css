@@ -31,7 +31,7 @@ h1,h2,h3,h4,h5,h6,p {
     padding: 12px 24px;
     border: none;
     border-radius: 8px;
-    background-color: var(--muted-teal);
+    background-color: var(--clr-muted-teal); /* corretto */
     color: var(--clr-onyx);
     font-size: 15px;
     font-weight: 600;
@@ -42,12 +42,16 @@ h1,h2,h3,h4,h5,h6,p {
     cursor: pointer;
 }
 
-/* Hover con micro-interazione*/
 .btn-primario:hover {
-    background-color: var(--deep-teal);
-    color: var(--alabaster-grey);
+    background-color: var(--clr-deep-teal); /* corretto */
+    color: var(--clr-alabaster);             /* corretto */
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primario:focus-visible {
+    outline: 2px solid var(--clr-deep-teal); /* corretto */
+    outline-offset: 3px;
 }
 
 /* Effetto di pressione */
@@ -217,4 +221,89 @@ h1,h2,h3,h4,h5,h6,p {
     .blog-article-header h1 {
         font-size: 36px;
     }
+}
+
+/* Stile base delle Card */
+.service-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effetto Hover sulla Card */
+.service-card:hover {
+    transform: translateY(-100px);
+    border-color: rgba(var(--bs-primary-rgb), 0.4);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+/* Contenitore Icona */
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+/* Transizione Freccia CTA */
+.service-card .transition-icon {
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover .transition-icon {
+    transform: translateX(4px);
+}
+
+/* Tracking lettera per eyebrow */
+.tracking-wider {
+    letter-spacing: 0.08em;
+}
+
+/* Card Servizi */
+.service-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--brand-accent) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Box Icona */
+.icon-wrapper {
+    width: 44px;
+    height: 44px;
+    background-color: var(--clr-dark-slate);
+    color: var(--brand-accent);
+}
+
+/* Badge Tecnologie */
+.tech-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 11px;
+    color: var(--text-main);
+    background-color: var(--clr-jet-black);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+}
+
+/* Link di azione nella card */
+.service-link {
+    color: var(--brand-accent);
+    transition: color 0.2s ease;
+}
+
+.service-link:hover {
+    color: var(--text-main);
+}
+
+.service-card .transition-icon {
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover .transition-icon {
+    transform: translateX(4px);
 }
