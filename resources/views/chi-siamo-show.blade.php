@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="{{ $member['nome'] }}">
     <main class="blog-article container">
         <a class="blog-back-link" href="{{ route('chi-siamo') }}">&larr; Torna al Chi-Siamo</a>
 

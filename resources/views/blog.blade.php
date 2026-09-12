@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Blog">
     <main class="blog-section container">
         <header class="blog-header">
             <p class="blog-eyebrow">// Approfondimenti tecnici</p>

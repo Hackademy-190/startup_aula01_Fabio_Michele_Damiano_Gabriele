@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Chi Siamo">
     <section class="team-section container text-center">
         <div class="team-intro">
             <h6 class="blog-eyebrow">// PARLIAMO DI NOI</h6>

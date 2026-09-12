@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="{{ $post['title'] }}">
     <main class="blog-article container">
         <a class="blog-back-link" href="{{ route('blog') }}">&larr; Torna al blog</a>
 
