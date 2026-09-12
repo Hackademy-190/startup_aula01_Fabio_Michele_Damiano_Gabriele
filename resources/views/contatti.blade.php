@@ -1,6 +1,6 @@
 <x-layout title="Contatti">
 git     <div class="contact-section container">
-        <div class="row align-items-center justify-content-center g-5">
+        <div class="row align-items-center justify-content-center g-5 vh-lg-100">
             <div class="col-12 col-lg-6">
                 <div class="contact-intro">
                     <span class="blog-eyebrow d-block mb-2">// PARLIAMO DEL TUO PROGETTO</span>

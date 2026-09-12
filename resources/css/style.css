@@ -478,6 +478,12 @@ p {
     border-radius: 6px;
 }
 
+@media (min-width: 992px) {
+    .vh-lg-100 {
+        height: 100vh;
+    }
+}
+
 /* --- SEZIONE CHI SIAMO / TEAM --- */
 .team-section {
     padding-top: 80px;
