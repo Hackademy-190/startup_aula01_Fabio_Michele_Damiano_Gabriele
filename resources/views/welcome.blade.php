@@ -2,8 +2,9 @@
 <main class="text-center d-flex align-items-center flex-column" style="background-color: var(--bg-page);">
 
     <!-- 1. HERO SECTION -->
-   <header class="hero-section min-vh-100 d-flex align-items-center justify-content-center py-5 w-100 position-relative" 
-        style="--hero-bg: url('{{ asset('media/WelcomeBG.jpg') }}'); border-color: var(--border-subtle) !important;">
+   <header class="hero-section min-vh-100 d-flex align-items-center justify-content-center py-5 w-100 position-relative"
+       style="border-color: var(--border-subtle) !important;">
+        <canvas id="network" aria-hidden="true"></canvas>
         <div class="container py-4">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8 mx-auto">
