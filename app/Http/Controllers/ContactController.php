@@ -18,17 +18,17 @@ class ContactController extends Controller
     public function submitForm(Request $request)
     {
         // Validazione dei dati del form
-        $formData = $request->validate([
+        $formdata = $request->validate([
             'name'    => 'required|string|max:255',
             'email'   => 'required|email',
             'message' => 'required|string',
         ]);
 
         // Recupera l'email del destinatario (l'utente che compila il form)
-        $emailDestinatario = $formData['email'];
+        $emailDestinatario = $formdata['email'];
 
         // Invia l'email usando la classe Mailable corretta (ContactFormMail)
-        Mail::to($emailDestinatario)->send(new ContactFormMail($formData));
+        Mail::to($emailDestinatario)->send(new ContactFormMail($formdata));
 
         return "Email inviata con successo! Controlla Mailtrap.";
     }

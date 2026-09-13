@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\Mail;
 class PublicController extends Controller
 {
     public function homepage()
@@ -148,13 +149,15 @@ class PublicController extends Controller
     public function contattiSubmit(Request $request)
     {
         // 1. Valida i dati del form
-        $request->validate([
+        $validated= $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email',
             'message' => 'required|string',
         ]);
 
+        // 2. Invia l'email usando la classe Mailable corretta (ContactFormMail)
+        Mail::to('hello@example.com')->send(new ContactFormMail($validated));
         // 2. Torna indietro alla pagina dei contatti con un messaggio di successo
         return redirect()->back()->with('success', 'Messaggio inviato con successo!');
     }
-}
+    }

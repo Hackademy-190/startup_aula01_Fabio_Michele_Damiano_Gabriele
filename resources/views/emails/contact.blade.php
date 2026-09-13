@@ -8,8 +8,8 @@
 </head>
 <body>
     <h2>Nuovo Contatto dal Sito</h2>
-    <p><strong>Nome:</strong> {{ $formData['name'] }}</p>
-    <p><strong>Email:</strong> {{ $formData['email'] }}</p>
-    <p><strong>Messaggio:</strong> {{ $formData['message'] }}</p>
+    <p><strong>Nome:</strong> {{ $formdata['name'] }}</p>
+    <p><strong>Email:</strong> {{ $formdata['email'] }}</p>
+    <p><strong>Messaggio:</strong> {{ $formdata['message'] }}</p>
 </body>
 </html>

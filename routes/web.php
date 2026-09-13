@@ -17,4 +17,5 @@ Route::get('/chi-siamo/{id}', [PublicController::class, 'chiSiamoShow'])->name('
 Route::get('/contatti', [PublicController::class, 'contatti'])->name('contact');
 
 // INVIA i dati del form a Mailtrap (gestito con POST)
-Route::post('/contatti', [PublicController::class, 'contattiSubmit'])->name('contact.submit');
+Route::post('/contatti', [PublicController::class, 'contattiSubmit'])->name('contatti.submit');
+

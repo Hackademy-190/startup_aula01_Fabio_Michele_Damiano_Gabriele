@@ -14,11 +14,11 @@ class ContactFormMail extends Mailable
 {
     use Queueable, SerializesModels;
     
-    public array $formData;
+    public $formdata;
  
-    public function __construct(array $formData)
+    public function __construct( $formdata)
     {
-        $this->formData = $formData;
+        $this->formdata = $formdata;
     }
 
     /**
