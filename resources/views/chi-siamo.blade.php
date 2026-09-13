@@ -37,7 +37,7 @@
                             Lavoriamo con attenzione a performance, sicurezza e manutenibilita, per creare soluzioni che continuano a dare valore nel tempo.
                         </p>
                     </div>
-                    <img src="{{asset('media/chi-siamo2.png')}}" alt="Team al lavoro su un progetto digitale">
+                    <img src="{{asset('media/chi-siamo2.jpg')}}" alt="Team al lavoro su un progetto digitale">
                 </div>
             </div>
         </section>
@@ -55,7 +55,7 @@
                             Da allora continuiamo a crescere insieme, condividendo conoscenze e costruendo rapporti duraturi con chi lavora al nostro fianco.
                         </p>
                     </div>
-                    <img src="{{asset('media/chi-siamo1.png')}}" alt="Collaborazione e crescita del team">
+                    <img src="{{asset('media/chi-siamo1.jpg')}}" alt="Collaborazione e crescita del team">
                 </div>
             </div>
         </section>
