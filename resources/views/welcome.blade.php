@@ -44,7 +44,7 @@
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="https://picsum.photos/1920/1080" class="d-block w-100 custom-carousel-img" alt="Sviluppo web">
+                        <img src="{{ asset('media/carosello1.jpg') }}" class="d-block w-100 custom-carousel-img" alt="Sviluppo web">
                         <div class="carousel-caption p-3 p-md-4 rounded-3">
                             <span class="blog-eyebrow d-block mb-1">// SVILUPPO WEB</span>
                             <h3 class="fs-4 fs-md-2 fw-bold">Esperienze digitali solide</h3>
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/1921/1081" class="d-block w-100 custom-carousel-img" alt="Software su misura">
+                        <img src="{{ asset('media/carosello2.jpg') }}" class="d-block w-100 custom-carousel-img" alt="Software su misura">
                         <div class="carousel-caption p-3 p-md-4 rounded-3">
                             <span class="blog-eyebrow d-block mb-1">// SOFTWARE SU MISURA</span>
                             <h3 class="fs-4 fs-md-2 fw-bold">Strumenti costruiti intorno a te</h3>
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="https://picsum.photos/1922/1082" class="d-block w-100 custom-carousel-img" alt="Cloud & Security">
+                        <img src="{{ asset('media/carosello3.jpg') }}" class="d-block w-100 custom-carousel-img" alt="Cloud & Security">
                         <div class="carousel-caption p-3 p-md-4 rounded-3">
                             <span class="blog-eyebrow d-block mb-1">// CLOUD &amp; SECURITY</span>
                             <h3 class="fs-4 fs-md-2 fw-bold">Infrastrutture pronte per il futuro</h3>
