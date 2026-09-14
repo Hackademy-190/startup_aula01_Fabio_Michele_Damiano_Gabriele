@@ -13,7 +13,7 @@ git     <div class="contact-section container">
 
             <div class="col-12 col-lg-6">
                 <div class="contact-form-panel">
-                    <form action="{{ route('contact.submit') }}" method="POST" class="contact-form">
+                    <form action="{{ route('contatti.submit') }}" method="POST" class="contact-form">
                         @csrf
 
                         @if(session('success'))
