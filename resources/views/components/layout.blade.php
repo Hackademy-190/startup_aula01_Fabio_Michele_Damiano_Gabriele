@@ -17,7 +17,7 @@
 </head>
 <body>
     <x-navbar />
-    <div class="min-vh-100" style="background-color:#20282c">
+    <div class="min-vh-100 site-shell" style="background-color:#20282c">
         {{$slot}}
     </div>
     <x-footer />
@@ -25,24 +25,5 @@
     <button id="backToTop" class="back-to-top" aria-label="Torna in alto">
         <i class="bi bi-arrow-up"></i>
     </button>
-    
-    <script>
-        const backToTopBtn = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-        
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
 </body>
 </html>
